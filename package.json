@@ -1,0 +1,18 @@
+{
+  "name": "mousejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx forever script.js",
+    "stop": "npx forever stop(0)",
+    "list": "npx forever list"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "forever": "^4.0.2",
+    "robotjs": "^0.6.0",
+    "typescript": "^4.5.4"
+  }
+}
