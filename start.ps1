@@ -1,0 +1,1 @@
+npx forever start script.js

@@ -1,0 +1,1 @@
+npx forever stop(0)
