@@ -3,7 +3,7 @@ const robot = require("robotjs");
 
 
 (async function(){
-    await new Promise(resolve => setTimeout(resolve, 60000));
+    await new Promise(resolve => setTimeout(resolve, 30000));
     let mouse=robot.getMousePos();
     //console.log("Mouse is at x:" + mouse.x + " y:" + mouse.y);
     //Move the mouse down by 100 pixels.
