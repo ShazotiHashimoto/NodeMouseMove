@@ -1,13 +1,20 @@
 const robot = require("robotjs");
-//Get the mouse position, retuns an object with x and y. 
 
+(async function () {
+    await new Promise(resolve => setTimeout(resolve, 30000)); // Initial delay
 
-(async function(){
-    await new Promise(resolve => setTimeout(resolve, 30000));
-    let mouse=robot.getMousePos();
-    //console.log("Mouse is at x:" + mouse.x + " y:" + mouse.y);
-    //Move the mouse down by 100 pixels.
-    robot.moveMouse(mouse.x,mouse.y+1);
-    robot.moveMouse(mouse.x,mouse.y-1);
-    //console.log("mouse moved");
+    const interval = 30000; // Run slightly under 30 seconds
+    let angle = 0;
+
+    setInterval(() => {
+        const pos = robot.getMousePos();
+        const radius = 5;
+
+        // Calculate new small circular position
+        const x = pos.x + Math.cos(angle) * radius;
+        const y = pos.y + Math.sin(angle) * radius;
+
+        robot.moveMouseSmooth(x, y);
+        angle += Math.PI / 4; // Slightly rotate each time
+    }, interval);
 })();
