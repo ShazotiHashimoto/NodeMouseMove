@@ -11,8 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "forever": "^4.0.3",
+    "mousejs": "file:",
+    "pm2": "^6.0.6",
     "robotjs": "^0.6.0",
     "typescript": "^4.5.4"
+  },
+  "overrides": {
+    "minimist": "^1.2.8",
+    "braces": "^3.0.3"
   }
 }
